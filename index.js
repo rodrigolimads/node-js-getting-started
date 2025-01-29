@@ -20,6 +20,11 @@ app.get('/cool', (req, res) => {
   res.send(cool())
 })
 
+app.get('/pi-number', (req, res) => {
+  console.log(`Rendering a cool ascii face for route '/cool'`)
+  res.send(Math.PI)
+})
+
 const server = app.listen(port, () => {
   console.log(`Listening on ${port}`)
 })
